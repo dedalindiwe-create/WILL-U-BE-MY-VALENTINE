@@ -2,7 +2,66 @@
 <html>
 <head>
   <title>Happy Valentine’s Day ❤️</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: pink;
+      color: darkred;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    /* Countdown */
+    #countdown {
+      font-size: 1.5em;
+      margin: 20px;
+      font-weight: bold;
+    }
+
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin: 20px;
+    }
+
+    .gallery img, .gallery video {
+      width: 100%;
+      border-radius: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .gallery img:hover, .gallery video:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px red;
+    }
+
+    /* Surprise Button */
+    button {
+      background: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: darkred;
+    }
+  </style>
 </head>
 <body>
   <h1>Happy Valentine’s Day, My Love 💕</h1>
@@ -18,11 +77,14 @@
   <!-- Countdown -->
   <div id="countdown"></div>
 
-  <!-- Photo Gallery -->
+  <!-- Photo & Video Gallery -->
   <div class="gallery">
-    <img src="photo1.jpg" alt="Our memory 1">
-    <img src="photo2.jpg" alt="Our memory 2">
-    <img src="photo3.jpg" alt="Our memory 3">
+    <img src="us.jpg" alt="Us together">
+    <img src="memory1.jpg" alt="Memory 1">
+    <video controls>
+      <source src="valentine.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
 
   <!-- Surprise Button -->
