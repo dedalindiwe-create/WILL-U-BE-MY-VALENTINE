@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Valentine’s Day ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Happy Valentine’s Day, My Love 💕</h1>
+  <p>You make my world brighter every day.</p>
+
+  <!-- Music Player (autoplay) -->
+  <iframe width="560" height="315" 
+  src="https://www.youtube.com/embed/qeR20-Qq1YI?autoplay=1" 
+  title="Eyes Blue x Heather" frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen></iframe>
+
+  <!-- Countdown -->
+  <div id="countdown"></div>
+
+  <!-- Photo Gallery -->
+  <div class="gallery">
+    <img src="photo1.jpg" alt="Our memory 1">
+    <img src="photo2.jpg" alt="Our memory 2">
+    <img src="photo3.jpg" alt="Our memory 3">
+  </div>
+
+  <!-- Surprise Button -->
+  <button onclick="document.getElementById('secret').style.display='block'">
+    Click for a surprise 💌
+  </button>
+  <p id="secret" style="display:none;">You are my forever Valentine ❤️</p>
+
+  <!-- Countdown Script -->
+  <script>
+    const targetDate = new Date("Feb 14, 2026 00:00:00").getTime();
+    const timer = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      const days = Math.floor(distance / (1000*60*60*24));
+      document.getElementById("countdown").innerHTML = days + " days left 💖";
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerHTML = "Happy Valentine’s Day! 💘";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
